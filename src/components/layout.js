@@ -9,37 +9,60 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import {Link} from "gatsby"
+import "./app.css"
+import Img from "gatsby-image"
+
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+  query MyQuery {
+    file(relativePath: {eq: "CamboGuitar.jpg"}) {
+      childImageSharp {
+        fluid {
+          aspectRatio
+          base64
+         
+          src
+          srcSet
         }
       }
     }
+  }
+  
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
+        // style={{
+        //   margin: `0 auto`,
+        //   maxWidth: 960,
+        //   padding: `0px 1.0875rem 1.45rem`,
+        //   paddingTop: 0,
+        // }}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <nav >
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/shop">Shop</Link>
+      </nav>
+      <div className="main" style={{height: "100vh",}}>
+        <div className="splashContainer" >
+          {/* <img style={{height: "100vh", objectFit: "cover",objectPosition: "70% 25%", width: "100%"}} src={splashImage} alt=""/>
+           */}
+           <Img style={{height: "100vh", objectFit: "cover",objectPosition: "70% 25%", width: "100%"}} fluid={data.file.childImageSharp.fluid}></Img>
+        <p className="credit">photo credit Annell Mathews Photography</p>
+        </div>
+        <div  className="contentContainer">
+          <div className="content">
+          <main>{children}</main>
+          </div>
+          
+        </div>
+       
+      </div>
       </div>
     </>
   )

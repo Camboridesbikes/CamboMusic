@@ -1,0 +1,114 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: rgb(0, 0, 0);
+  
+}
+
+a {
+  text-decoration: none;
+  color: #108db8;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  width: 100%;
+  /* background: #108db8; */
+  position: fixed;
+  text-align: right;
+  padding-right: 10%;
+  z-index: 1000;
+  ;
+}
+
+nav a {
+  color: white;
+  padding: 1rem;
+  display: inline-block;
+  transition-duration: .2s;
+  padding-right: 7%;
+  font-size: 22px;
+}
+
+nav a:hover {
+  transform: scale(1.3);
+
+}
+
+
+.content {
+  margin-top: 5rem;
+  color: white;
+}
+
+.credit{
+  color: rgba(255, 255, 255, 0.692);
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  width: 100%;
+  font-size: .7em;
+}
+
+div.main{
+  display: flex;
+  flex-direction: row;
+}
+
+
+div.splashContainer{
+  width: 50%;
+  max-height: 100vh; 
+  overflow: hidden;
+  position: relative;
+}
+div.contentContainer{
+  width: 50%;
+     overflow-X: hidden;
+     height: 100vh;
+}
+
+
+@media only screen and (max-width: 600px){
+  div.main{
+    flex-direction: column;
+
+  }
+  nav{
+    text-align: center;
+  }
+  nav > a{
+    font-size: 16px;
+   text-shadow: black;
+  }
+  div.splashContainer{
+    width: 100%;
+    max-height: 100vh; 
+    overflow: hidden;
+  }
+  div.contentContainer{
+    width: 100%;
+  }
+  div.content{
+    margin-top: .5rem;
+  }
+}
+@media only screen and (max-width: 900px){
+  nav a{
+    padding-right: 4.75%;
+  }
+}
+
