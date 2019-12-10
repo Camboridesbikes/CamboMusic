@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{VPwj:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=(t("Bl7J"),t("vrFN"));t("ihVk");n.default=function(){return l.a.createElement(l.a.Fragment,null,l.a.createElement(r.a,{title:"Shop"}),l.a.createElement("div",null,l.a.createElement("h3",null,"Coming Soon")))}}}]);
+//# sourceMappingURL=component---src-pages-shop-jsx-a40f52448c657297e8b5.js.map
