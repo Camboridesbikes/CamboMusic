@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #108db8;
+  color: greenyellow;
   font-weight: bold;
 }
 
@@ -80,8 +80,65 @@ div.contentContainer{
      overflow-X: hidden;
      height: 100vh;
 }
+div.sMContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  
+}
+.externalIcon{
+  margin: .5em;
+  z-index: 1000;
+  filter: #fff; /* IE6-9 */
+  -webkit-filter: brightness(100); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: brightness(100); /* Microsoft Edge and Firefox 35+ */
+  width: 55px;
+  height: 55px;
+}
+  
+  /* Disable grayscale on hover */
+.externalIcon:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+  
+}
 
+button.callToAction{
+  background: none;
+  position: absolute;
+  top: 70%;
+  right:40%;
+  z-index: 1000;
+  border: solid greenyellow 2px;
+  border-radius: 25px;
+  font-size: 1.25em;
+  line-height: 175%;
+  transition-duration: .2s;
+}
+button.callToAction:hover{
+  transform: scale(1.3);
+}
 
+button.callToAction a{
+  color: greenyellow;
+}
+
+@media only screen and (max-width: 900px){
+  nav a{
+    padding-right: 4.75%;
+  }
+  .externalIcon{
+    width: 45px;
+    height: 45px;
+  }
+  button.callToAction{
+    right: 30%;
+    font-size: 1em;
+  }
+}
 
 @media only screen and (max-width: 600px){
   div.main{
@@ -107,11 +164,42 @@ div.contentContainer{
   div.content{
     margin-top: .5rem;
   }
+  div.sMContainer{
+    position: absolute;
+    top: unset;
+    left: unset;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    
+  }
+  .externalIcon{
+    margin: .5em;
+    z-index: 1000;
+    filter: #fff; /* IE6-9 */
+    -webkit-filter: brightness(100); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: brightness(100); /* Microsoft Edge and Firefox 35+ */
+    width: 35px;
+  height: 35px;
+  }
+  button.callToAction{
+   top: 45%;
+   font-size: .7em;
+  }
 }
-@media only screen and (max-width: 900px){
-  nav a{
-    padding-right: 4.75%;
+
+
+
+
+@media only screen and (max-width: 420px){
+  .externalIcon{
+    width: 30px;
+    height: 30px;
   }
  
 }
+
+
 
