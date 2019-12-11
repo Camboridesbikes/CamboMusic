@@ -107,7 +107,7 @@ div.sMContainer{
 }
 
 button.callToAction{
-  background: none;
+  background: #0000003d;
   position: absolute;
   top: 70%;
   right:40%;
