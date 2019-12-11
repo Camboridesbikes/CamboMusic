@@ -62,6 +62,9 @@ const Layout = ({ children }) => {
           <div className='sMContainer'>
             <SocialPanel/>
           </div>
+          <button className="callToAction">
+            <a href="https://www.patreon.com/Cambomusic">Connect On Patreon</a>
+          </button>
         <p className="credit">photo credit Annell Mathews Photography</p>
         </div>
         <div  className="contentContainer">
