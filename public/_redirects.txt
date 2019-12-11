@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://cambomusic.netlify.com/* http://www.cambomusic.com/:splat 301!
