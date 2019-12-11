@@ -80,7 +80,27 @@ div.contentContainer{
      overflow-X: hidden;
      height: 100vh;
 }
-
+div.sMContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  margin: 1em;
+  
+}
+.externalIcon{
+  z-index: 1000;
+  filter: #fff; /* IE6-9 */
+  -webkit-filter: brightness(100); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: brightness(100); /* Microsoft Edge and Firefox 35+ */
+}
+  
+  /* Disable grayscale on hover */
+.externalIcon:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+  
+}
 
 
 @media only screen and (max-width: 600px){

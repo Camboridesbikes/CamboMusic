@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import {Link} from "gatsby"
 import "./app.css"
 import Img from "gatsby-image/withIEPolyfill"
+import SocialPanel from './SocialPanel'
 
 
 
@@ -58,7 +59,9 @@ const Layout = ({ children }) => {
             objectFit="cover" objectPosition="70% 25%">
               
             </Img>
-            
+          <div className='sMContainer'>
+            <SocialPanel/>
+          </div>
         <p className="credit">photo credit Annell Mathews Photography</p>
         </div>
         <div  className="contentContainer">
