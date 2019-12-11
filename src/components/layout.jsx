@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import {Link} from "gatsby"
 import "./app.css"
-import Img from "gatsby-image"
+import Img from "gatsby-image/withIEPolyfill"
 
 
 
@@ -52,7 +52,13 @@ const Layout = ({ children }) => {
         <div className="splashContainer" >
           {/* <img style={{height: "100vh", objectFit: "cover",objectPosition: "70% 25%", width: "100%"}} src={splashImage} alt=""/>
            */}
-           <Img style={{height: "100vh", objectFit: "cover",objectPosition: "70% 25%", width: "100%"}} fluid={data.file.childImageSharp.fluid}></Img>
+           <Img 
+            style={{height: "100vh", width: "100%"}} 
+            fluid={data.file.childImageSharp.fluid}
+            objectFit="cover" objectPosition="70% 25%">
+              
+            </Img>
+            
         <p className="credit">photo credit Annell Mathews Photography</p>
         </div>
         <div  className="contentContainer">
