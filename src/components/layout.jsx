@@ -45,9 +45,9 @@ const Layout = ({ children }) => {
         // }}
       >
         <nav >
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/shop">Shop</Link>
+        <Link to="/" aria-label="to home page">Home</Link>
+        <Link to="/about" aria-label="to about page">About</Link>
+        <Link to="/shop" aria-label="to shop page">Shop</Link>
       </nav>
       <div className="main" style={{height: "100vh",}}>
         <div className="splashContainer" >
@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
           <div className='sMContainer'>
             <SocialPanel/>
           </div>
-          <button className="callToAction">
+          <button className="callToAction" aria-label="Connect on Patreon">
             <a href="https://www.patreon.com/Cambomusic">Connect On Patreon</a>
           </button>
         <p className="credit">photo credit Annell Mathews Photography</p>
