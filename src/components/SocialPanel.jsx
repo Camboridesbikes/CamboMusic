@@ -34,9 +34,9 @@ const SocialPanel = () =>{
 console.log(query);
     return(
         <>
-        <a  className='externalIcon' href="https://www.patreon.com/Cambomusic"><Img  fluid={query.image1.childImageSharp.fluid}></Img></a>
-        {/* <a  className='externalIcon' href=""><Img style={{width: '40px', height: '40px'}} fluid={query.image2.childImageSharp.fluid}></Img></a>
-        <a  className='externalIcon' href=""><Img style={{width: '40px', height: '40px'}} fluid={query.image3.childImageSharp.fluid}></Img></a> */}
+        <a   className='externalIcon' href="https://www.patreon.com/Cambomusic"><Img alt="Patreon Link"  fluid={query.image1.childImageSharp.fluid}></Img></a>
+        {/* <a  className='externalIcon' href=""><Img alt=" Link" style={{width: '40px', height: '40px'}} fluid={query.image2.childImageSharp.fluid}></Img></a>
+        <a  className='externalIcon' href=""><Img alt=" Link" style={{width: '40px', height: '40px'}} fluid={query.image3.childImageSharp.fluid}></Img></a> */}
         
 
     </>

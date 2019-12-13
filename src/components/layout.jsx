@@ -56,8 +56,9 @@ const Layout = ({ children }) => {
            <Img 
             style={{height: "100vh", width: "100%"}} 
             fluid={data.file.childImageSharp.fluid}
-            objectFit="cover" objectPosition="70% 25%">
-              
+            objectFit="cover" objectPosition="70% 25%"
+            alt="Cambo singing his heart out in Carlsbad, CA. photo credit: Annel Mathews Photography">
+            
             </Img>
           <div className='sMContainer'>
             <SocialPanel/>
