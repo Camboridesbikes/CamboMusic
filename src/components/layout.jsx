@@ -45,9 +45,9 @@ const Layout = ({ children }) => {
         // }}
       >
         <nav >
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/shop">Shop</Link>
+        <Link to="/" aria-label="to home page">Home</Link>
+        <Link to="/about" aria-label="to about page">About</Link>
+        <Link to="/shop" aria-label="to shop page">Shop</Link>
       </nav>
       <div className="main" style={{height: "100vh",}}>
         <div className="splashContainer" >
@@ -56,13 +56,14 @@ const Layout = ({ children }) => {
            <Img 
             style={{height: "100vh", width: "100%"}} 
             fluid={data.file.childImageSharp.fluid}
-            objectFit="cover" objectPosition="70% 25%">
-              
+            objectFit="cover" objectPosition="70% 25%"
+            alt="Cambo singing his heart out in Carlsbad, CA. photo credit: Annel Mathews Photography">
+            
             </Img>
           <div className='sMContainer'>
             <SocialPanel/>
           </div>
-          <button className="callToAction">
+          <button className="callToAction" aria-label="Connect on Patreon">
             <a href="https://www.patreon.com/Cambomusic">Connect On Patreon</a>
           </button>
         <p className="credit">photo credit Annell Mathews Photography</p>

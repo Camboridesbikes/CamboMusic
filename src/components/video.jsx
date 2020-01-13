@@ -13,13 +13,14 @@ class Video extends Component{
 
     Frame =
         <div className="vidWrapper" style={{position: 'relative', paddingBottom: '56.25%', height:'0', margin: 'auto'}}>
-            <iframe style={{position: 'absolute', top: '0', left: '0'}} className="homeVid"width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/KjwNTK_4DTo?autoplay=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+            <iframe title="Business of Smiles by Cambo" style={{position: 'absolute', top: '0', left: '0'}} className="homeVid"width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/KjwNTK_4DTo?autoplay=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
         </div>
         
     Button = <button onClick={this.click}
         style={{ border: 'none', background: 'none', marginTop: " 10%", cursor: 'pointer'}}
+        aria-label="Play button"
         >
-           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" stroke="#fff" fill="#fff"><path d="M3 22v-20l18 10-18 10z"/></svg>
+           <svg alt="Play Button" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" stroke="#fff" fill="#fff"><path d="M3 22v-20l18 10-18 10z"/></svg>
     </button>
     
     render(){
