@@ -1,3 +1,12 @@
 p{
     width:70%;
 }
+
+.aboutContent { 
+    padding-left: 6%;
+}
+
+.aboutContent h1 {
+    font-size: 4.5em;
+    padding-top: 2em;
+}
