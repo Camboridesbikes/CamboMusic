@@ -29,7 +29,7 @@ nav {
   position: fixed;
   text-align: right;
   padding-right: 10%;
-  z-index: 1000;
+  z-index: 1;
   ;
 }
 
@@ -91,7 +91,7 @@ div.sMContainer{
 }
 .externalIcon{
   margin: .5em;
-  z-index: 1000;
+  z-index: 1;
   filter: #fff; /* IE6-9 */
   -webkit-filter: brightness(100); /* Google Chrome, Safari 6+ & Opera 15+ */
   filter: brightness(100); /* Microsoft Edge and Firefox 35+ */
@@ -222,8 +222,8 @@ div.about h1 {
     filter: #fff; /* IE6-9 */
     -webkit-filter: brightness(100); /* Google Chrome, Safari 6+ & Opera 15+ */
     filter: brightness(100); /* Microsoft Edge and Firefox 35+ */
-    width: 35px;
-  height: 35px;
+    width: 40px;
+  height: 40px;
   }
   button.callToAction{
    top: 65%;
@@ -243,8 +243,8 @@ div.about h1 {
 
 @media only screen and (max-width: 420px){
   .externalIcon{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
  
 }
