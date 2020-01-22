@@ -38,9 +38,9 @@ console.log(query);
     return(
         <>
         <a   className='externalIcon' href="https://www.patreon.com/Cambomusic" aria-label="link to patreon page"><Img alt="Patreon Link"  fluid={query.image1.childImageSharp.fluid}></Img></a>
-        <a  className='externalIcon' href="https://www.instagram.com/felixcambo" aria-label=""><Img alt="Instagram Link"  fluid={query.image2.childImageSharp.fluid}></Img></a>
-        <a  className='externalIcon' href="https://www.facebook.com/FelixCamboMusic" aria-label=""><Img alt="Facebook Link"  fluid={query.image3.childImageSharp.fluid}></Img></a>
-        <a  className='externalIcon' href="https://twitter.com/FelixCambo" aria-label=""><Img alt="Twitter Link"  fluid={query.image4.childImageSharp.fluid}></Img></a>
+        <a  className='externalIcon' href="https://www.instagram.com/felixcambo" aria-label="link to Instagram"><Img alt="Instagram Link"  fluid={query.image2.childImageSharp.fluid}></Img></a>
+        <a  className='externalIcon' href="https://www.facebook.com/FelixCamboMusic" aria-label="link to Facebook page"><Img alt="Facebook Link"  fluid={query.image3.childImageSharp.fluid}></Img></a>
+        <a  className='externalIcon' href="https://twitter.com/FelixCambo" aria-label="link to twitter"><Img alt="Twitter Link"  fluid={query.image4.childImageSharp.fluid}></Img></a>
         
 
     </>
