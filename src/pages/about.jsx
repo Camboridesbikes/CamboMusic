@@ -2,8 +2,6 @@ import React from 'react';
 
 import SEO from "../components/seo"
 
-// import './about.css';
-
 export default () => (
 <>
   <SEO title="About" />

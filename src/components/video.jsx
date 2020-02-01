@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 class Video extends Component{
-
+    
     constructor(){
         super();
         this.state = {
@@ -13,7 +13,7 @@ class Video extends Component{
 
     Frame =
         <div className="vidWrapper" style={{position: 'relative', paddingBottom: '56.25%', height:'0', margin: 'auto'}}>
-            <iframe title="Business of Smiles by Cambo" style={{position: 'absolute', top: '0', left: '0'}} className="homeVid"width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/fnMgbeOcs40?autoplay=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+            <iframe title="Luck Is On My Side" style={{position: 'absolute', top: '0', left: '0'}} className="homeVid"width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/fnMgbeOcs40?autoplay=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
         </div>
         
     Button = <button onClick={this.click}
@@ -26,6 +26,7 @@ class Video extends Component{
     render(){
         const {play} = this.state;
         const {Button, Frame} = this;
+        //if state of play == true, then render the video, if false, then display the play button
         return(
             <div style={{textAlign: "center"}}>
             {play ? Frame : Button}

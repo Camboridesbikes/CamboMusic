@@ -2,7 +2,7 @@ import React from 'react';
 
 import SEO from "../components/seo"
 
-import './about.css';
+//import './about.css';
 
 export default () => (
   <>
