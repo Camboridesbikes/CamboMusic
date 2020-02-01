@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   background: rgb(0, 0, 0);
-  
+
 }
 
 a {
@@ -23,13 +23,18 @@ img {
   max-width: 100%;
 }
 
+div.main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* -------------  Navigation  ------------------*/
 nav {
   width: 100%;
-  /* background: #108db8; */
   position: fixed;
   text-align: right;
   padding-right: 10%;
-  z-index: 100;
+  z-index: 10;
 }
 
 nav a {
@@ -39,7 +44,7 @@ nav a {
   transition-duration: .2s;
   padding-right: 7%;
   font-size: 22px;
-  
+
 }
 
 nav a:hover {
@@ -47,13 +52,9 @@ nav a:hover {
 
 }
 
+/* ---------------------  Cover Image  ------------------------- */
 
-.content {
-  margin-top: 5rem;
-  color: white;
-}
-
-.credit{
+.credit {
   color: rgba(255, 255, 255, 0.692);
   text-align: left;
   position: absolute;
@@ -63,55 +64,18 @@ nav a:hover {
   font-size: .7em;
 }
 
-div.main{
-  display: flex;
-  flex-direction: row;
-}
-
-
-div.splashContainer{
+div.splashContainer {
   width: 50%;
-  max-height: 100vh; 
+  max-height: 100vh;
   overflow: hidden;
   position: relative;
 }
-div.contentContainer{
-  width: 50%;
-     overflow-X: hidden;
-     height: 100vh;
-}
-div.sMContainer{
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  margin: 1em;
-  z-index: 10;
-  
-}
-.externalIcon{
-  margin: .5em;
-  /* z-index: 2; */
-  filter: #fff; /* IE6-9 */
-  -webkit-filter: brightness(100); /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: brightness(200) saturate(0%); /* Microsoft Edge and Firefox 35+ */
-  width: 55px;
-  height: 55px;
-}
-  
-  /* Disable grayscale on hover */
-.externalIcon:hover {
-  -webkit-filter: grayscale(0);
-  filter: none;
-  
-}
 
-button.callToAction{
+button.callToAction {
   background: #0000003d;
   position: absolute;
   top: 70%;
-  right:40%;
+  right: 40%;
   z-index: 1000;
   border: solid greenyellow 2px;
   border-radius: 25px;
@@ -119,45 +83,95 @@ button.callToAction{
   line-height: 175%;
   transition-duration: .2s;
 }
-button.callToAction:hover{
+
+button.callToAction:hover {
   transform: scale(1.3);
 }
 
-button.callToAction a{
+button.callToAction a {
   color: greenyellow;
 }
 
-/* Index */
+/* -------------------  Site Content  ---------------- */
 
-div.index{
+.content {
+  margin-top: 5rem;
+  color: white;
+}
+
+
+
+div.contentContainer {
+  width: 50%;
+  overflow-X: hidden;
+  height: 100vh;
+}
+
+/*--------------- Social Media Link Container ----------------*/
+
+div.sMContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  z-index: 10;
+
+}
+
+.externalIcon {
+  margin: .5em;
+  /* z-index: 2; */
+  filter: #fff;
+  /* IE6-9 */
+  -webkit-filter: brightness(100);
+  /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: brightness(200) saturate(0%);
+  /* Microsoft Edge and Firefox 35+ */
+  width: 55px;
+  height: 55px;
+}
+
+/* Disable grayscale on hover */
+.externalIcon:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+
+}
+
+
+
+/*------------------  Index  -----------------*/
+
+div.index {
   text-align: left;
 }
-h1{
 
- margin: 0;
- font-size: 4em;
-}
-h2{
-margin: .3em;
-margin-left: .5em;
+h1 {
 
+  margin: 0;
+  font-size: 4em;
 }
 
-div.vidWrapper{
- width: 70%;
+h2 {
+  margin: .3em;
+  margin-left: .5em;
+
 }
 
-
-/* About CSS */
-
-p{
-  width:70%;
+div.vidWrapper {
+  width: 70%;
 }
 
 
+/*-------------------- About ---------------------*/
 
+p {
+  width: 70%;
+}
 
-div.about { 
+div.about {
   padding-left: 6%;
 }
 
@@ -166,98 +180,115 @@ div.about h1 {
   padding-top: 15%;
 }
 
-/* Media Queries */
+/*---------------- Media Queries ------------------------*/
 
-@media only screen and (max-width: 900px){
-  nav a{
+@media only screen and (max-width: 900px) {
+
+  /* Navigation */
+  nav a {
     padding-right: 4.75%;
   }
-  .externalIcon{
+
+  /* Cover Image Links */
+  .externalIcon {
     width: 45px;
     height: 45px;
   }
-  button.callToAction{
+
+  button.callToAction {
     right: 30%;
     font-size: 1em;
   }
 }
 
-@media only screen and (max-width: 600px){
-  div.main{
+@media only screen and (max-width: 600px) {
+  div.main {
     flex-direction: column;
 
   }
-  nav{
+
+  /* Navigation */
+  nav {
     text-align: center;
   }
-  nav > a{
+
+  nav>a {
     text-decoration: none;
     font-size: 16px;
-   text-shadow: black;
+    text-shadow: black;
   }
-  div.splashContainer{
+
+  /* Cover Image */
+  div.splashContainer {
     width: 100%;
-    max-height: 100vh; 
+    max-height: 100vh;
     overflow: hidden;
   }
-  div.contentContainer{
-    width: 100%;
-  }
-  div.content{
-    margin-top: .5rem;
-  }
-  div.sMContainer{
+
+  div.sMContainer {
     position: absolute;
-    top: unset;
+    /* top: unset;
     left: unset;
     bottom: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
+    right: 0; */
+    /* display: flex;
+    flex-direction: row; */
     margin: 1em;
-    
+
   }
-  .externalIcon{
+
+  .externalIcon {
     margin: .5em;
     z-index: 1000;
-    filter: #fff; /* IE6-9 */
-    -webkit-filter: brightness(100); /* Google Chrome, Safari 6+ & Opera 15+ */
-    filter: brightness(100); /* Microsoft Edge and Firefox 35+ */
+    filter: #fff;
+    /* IE6-9 */
+    -webkit-filter: brightness(100);
+    /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: brightness(100);
+    /* Microsoft Edge and Firefox 35+ */
     width: 40px;
-  height: 40px;
+    height: 40px;
   }
-  button.callToAction{
-   top: 65%;
-   font-size: .7em;
+
+  button.callToAction {
+    top: 65%;
+    font-size: .7em;
+  }
+
+  /* Site Content */
+  div.contentContainer {
+    width: 100%;
+  }
+
+  div.content {
+    margin-top: .5rem;
   }
 }
 
-/* Media Index */
+/* Index */
 
-@media only screen and (max-width: 1200px){
-  div.vidWrapper{
+@media only screen and (max-width: 1200px) {
+  div.vidWrapper {
     width: 100%;
   }
- }
+}
 
-/* Media About */
+/* About */
 
-@media only screen and (max-width: 420px){
-  .externalIcon{
+@media only screen and (max-width: 420px) {
+  .externalIcon {
     width: 35px;
     height: 35px;
   }
- 
+
 }
 
-@media only screen and (max-width: 900px){
-  p{
-      width:80%;
+@media only screen and (max-width: 900px) {
+  p {
+    width: 80%;
   }
+
   .aboutContent h1 {
-      padding-top: 7%;
+    padding-top: 7%;
   }
 }
-
-
-

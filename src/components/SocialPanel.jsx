@@ -16,7 +16,7 @@ export const sharpImage = graphql`
     }
 `
 const SocialPanel = () =>{
-
+    // querying images for social media icons from ../src/images
     const query = useStaticQuery( graphql`
     query {
         image1: file(relativePath: {eq: "externalIcons/Patreon.png"}) {
@@ -34,6 +34,7 @@ const SocialPanel = () =>{
       }
       `)
 
+      //creating a link for each of the icons
 console.log(query);
     return(
         <>
